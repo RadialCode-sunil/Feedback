@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Work+Sans:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.ff_poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.ff_work_sans {
+    font-family: 'Work Sans', sans-serif;
+}
+
+:root {
+    /* FONT-SIZE */
+    --fs-4xl: 64px;
+    --fs-3xl: 48.83px;
+    --fs-2xl: 39.06px;
+    --fs-xl: 25px;
+    --fs-lg: 20px;
+    --fs-md: 16px;
+    --fs-sm: 12px;
+}
+
+.fs_lg {
+    font-size: var(--fs-lg);
+}
+
+.bg_base {
+    background-color: #FFF7F4;
+}
+
+.text_dark_400 {
+    color: #373737;
+}
+
+.text_orange {
+    color: #FF5300;
+}
+
+.min_vh_100 {
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.d_flex {
+    display: flex;
+}
+
+.align_items_center {
+    align-items: center;
+}
+
+.justify_content_between {
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin-left: 24px;
+}
+
+.py_30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.pageLogo {
+    font-size: var(--fs-2xl);
+    font-weight: normal;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+}
+
+/* navbar code */
+
+
+@media (max-width:992px) {
+    :root {
+        /* FONT-SIZE */
+        --fs-2xl: 35.06px;
+    }
+
+    label[for="menuIcon"] {
+        width: 35px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    label[for="menuIcon"] span {
+        width: 100%;
+        height: 5px;
+        border-radius: 22px;
+        background-color: #FF5300;
+    }
+
+    nav ul.mobileView {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 101px;
+        left: -100%;
+        height: calc(100vh - 101px);
+        width: 100%;
+        background-color: #ff55007e;
+        transition: all 200ms linear;
+    }
+
+    input[type="checkbox"]:checked~ul.mobileView {
+        left: 0;
+    }
+}
+
+[id="menuIcon"] {
+    opacity: 0;
+    pointer-events: none;
+}
