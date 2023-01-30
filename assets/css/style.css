@@ -86,7 +86,10 @@ nav ul li {
 }
 
 /* navbar code */
-
+[id="menuIcon"] {
+    opacity: 0;
+    pointer-events: none;
+}
 
 @media (max-width:992px) {
     :root {
@@ -127,9 +130,4 @@ nav ul li {
     input[type="checkbox"]:checked~ul.mobileView {
         left: 0;
     }
-}
-
-[id="menuIcon"] {
-    opacity: 0;
-    pointer-events: none;
 }
